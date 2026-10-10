@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#292b34">
+<meta name="description" content="Nathan’s Gardening Co. in Tea Tree Gully, Adelaide. Explore garden clean-ups, hedge trimming and garden care. Call 0413 050 696 to discuss your garden.">
+<title>Nathan’s Gardening Co. | Tea Tree Gully, Adelaide</title>
+<style>
+:root{--ink:#292b34;--green:#a1ce38;--cream:#f5f4ed;--muted:#64675e;--line:#dedfd3;--max:1200px}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:95px}
+body{margin:0;background:var(--cream);color:var(--ink);font-family:Arial,Helvetica,sans-serif;line-height:1.6}
+a{color:inherit;text-decoration:none}
+button,input,select,textarea{font:inherit}
+button,a,input,select,textarea{touch-action:manipulation}
+img{max-width:100%;display:block}
+h1,h2,h3,p{margin-top:0}
+h1,h2,h3{line-height:1.07;letter-spacing:-.055em}
+h2{font-size:clamp(36px,5vw,62px);margin-bottom:22px}
+h3{font-size:25px}
+p{color:var(--muted)}
+.wrap{width:min(var(--max),calc(100% - 48px));margin:auto}
+.section{padding:100px 0}
+.eyebrow{font-size:12px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;display:block;margin-bottom:20px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:25px;padding:15px 23px;min-height:54px;background:var(--green);color:var(--ink);font-weight:700;border:1px solid transparent;border-radius:5px;cursor:pointer}
+.btn:hover{background:#b7dd58}
+.btn.outline{background:transparent;border-color:currentColor}
+.btn.outline:hover{background:#ffffff12}
+.skip{position:absolute;left:16px;top:-70px;background:white;padding:10px;z-index:100}
+.skip:focus{top:10px}
+:focus-visible{outline:3px solid #689519;outline-offset:5px}
+
+header{position:sticky;top:0;z-index:20;background:var(--cream);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:25px;height:88px}
+.brand{display:flex;align-items:center;gap:12px;font-weight:800;line-height:1.2;letter-spacing:-.04em;font-size:20px}
+.brand img{width:61px;height:61px;border-radius:50%}
+.brand small{display:block;font-size:10px;letter-spacing:.19em;text-transform:uppercase;margin-top:5px}
+nav{display:flex;align-items:center;gap:28px;font-size:13px;font-weight:700}
+.menu{display:none;background:none;border:1px solid var(--line);padding:8px 12px;border-radius:5px;color:var(--ink)}
+
+.hero{background:var(--ink);color:white;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.05fr 1fr;min-height:660px;align-items:center;gap:60px}
+.hero-copy{padding:65px 0}
+.hero .eyebrow{color:var(--green)}
+h1{font-size:clamp(53px,6.2vw,86px);margin-bottom:27px;font-weight:800}
+h1 em{font-style:normal;color:var(--green)}
+.hero p{color:#c7c9c7;max-width:450px;font-size:17px}
+.actions{display:flex;flex-wrap:wrap;gap:12px;margin:30px 0}
+.hero-photo{height:580px;position:relative;margin:40px 0}
+.hero-photo>img{width:100%;height:100%;object-fit:cover;border-radius:120px 8px 8px 8px}
+.photo-note{position:absolute;left:-25px;bottom:28px;background:var(--cream);color:var(--ink);padding:20px 25px;border-radius:5px;box-shadow:0 8px 30px #0002;max-width:260px;font-weight:700;line-height:1.35}
+.photo-note small{display:block;color:var(--muted);font-size:11px;letter-spacing:.12em;margin-bottom:8px}
+.hero-foot{font-size:12px;color:#c7c9c7;display:flex;gap:18px;flex-wrap:wrap}
+.hero-foot span:before{content:'↗';color:var(--green);margin-right:7px}
+.ribbon{background:var(--green);padding:18px 0;font-weight:700;font-size:13px}
+.ribbon .wrap{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
+
+.section-top{display:flex;justify-content:space-between;align-items:end;gap:40px;margin-bottom:38px}
+.section-top h2{max-width:650px;margin-bottom:0}
+.section-top p{max-width:320px;margin-bottom:0}
+.services{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.service{background:white;border-radius:8px;overflow:hidden}
+.service-image{height:260px;position:relative;overflow:hidden}
+.service-image img{width:100%;height:100%;object-fit:cover}
+.screen-photo{background-size:100% 168.32%;background-position:center 54.64%;aspect-ratio:3/4;background-repeat:no-repeat}
+.service-image.screen-photo{height:auto;aspect-ratio:3/2;background-size:100% auto;background-position:center 48%}
+.service-copy{padding:27px}
+.service-copy .number{font-size:12px;color:var(--muted);display:block;margin-bottom:13px}
+.service-copy p{font-size:14px;margin-bottom:20px}
+.text-link{font-size:13px;font-weight:700;border-bottom:1px solid var(--green);padding-bottom:5px}
+.service h3{margin-bottom:14px}
+
+.results{background:#e9ecdf}
+.comparisons{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.compare{position:relative;overflow:hidden;aspect-ratio:4/5;border-radius:8px;background:var(--ink);--split:50%}
+.compare>img{position:absolute;width:100%;height:100%;object-fit:cover}
+.compare .before{clip-path:inset(0 calc(100% - var(--split)) 0 0)}
+.compare:after{content:'';position:absolute;left:var(--split);top:0;bottom:0;width:2px;background:white;pointer-events:none}
+.tag{position:absolute;top:18px;background:#292b34e8;color:white;padding:6px 12px;font-size:11px;letter-spacing:.1em;font-weight:700;border-radius:4px;z-index:2}
+.tag.left{left:18px}
+.tag.right{right:18px}
+.handle{position:absolute;left:var(--split);top:50%;transform:translate(-50%,-50%);background:white;border-radius:50%;width:48px;height:48px;display:grid;place-items:center;font-size:20px;z-index:3;pointer-events:none}
+.compare input{position:absolute;inset:0;width:100%;height:100%;margin:0;opacity:0;cursor:ew-resize;z-index:4}
+.compare:focus-within{outline:3px solid #689519;outline-offset:5px}
+.result-caption{display:flex;justify-content:space-between;align-items:start;gap:20px;padding-top:20px}
+.result-caption h3{font-size:22px;margin-bottom:8px}
+.result-caption p{font-size:13px}
+.result-caption>span{font-size:11px;white-space:nowrap;color:var(--muted)}
+
+.about{display:grid;grid-template-columns:1fr 1fr;gap:75px;align-items:center}
+.about-photo{position:relative}
+.about-photo img{width:100%;height:550px;object-fit:cover;border-radius:8px 100px 8px 8px}
+.about-photo .stamp{position:absolute;right:-20px;bottom:35px;padding:25px;background:var(--green);border-radius:5px;font-size:23px;font-weight:800;line-height:1.15}
+.about p{font-size:16px}
+.checklist{list-style:none;padding:0;margin:25px 0 30px}
+.checklist li{padding:12px 0;border-bottom:1px solid var(--line);font-weight:700;font-size:14px}
+.checklist li:before{content:'↗';color:#689519;margin-right:14px}
+.gallery{display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px}
+.gallery figure{margin:0}
+.gallery .screen-photo{border-radius:8px}
+.gallery figcaption{font-weight:700;font-size:14px;margin-top:12px}
+.gallery-section{padding-top:0}
+
+.process{background:var(--ink);color:white}
+.process .eyebrow{color:var(--green)}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;margin-top:45px}
+.step{border-top:1px solid #ffffff30;padding-top:25px}
+.step b{color:var(--green);font-size:13px;display:block;margin-bottom:30px}
+.step p{color:#c7c9c7;font-size:14px}
+.faq-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:70px}
+details{border-bottom:1px solid var(--line);padding:22px 0}
+summary{cursor:pointer;font-weight:700;font-size:17px}
+details p{margin:15px 0 0;font-size:14px}
+
+.contact{background:#e9ecdf}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px}
+.contact h2{max-width:430px}
+.contact-links{display:grid;gap:22px;margin-top:35px}
+.contact-links small{display:block;color:var(--muted);font-size:11px;letter-spacing:.12em;font-weight:700}
+.contact-links a{font-size:clamp(20px,3vw,28px);font-weight:700;overflow-wrap:anywhere}
+.contact-links address{font-style:normal;font-size:17px}
+form{padding:30px;background:var(--cream);border-radius:8px}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+label{display:block;font-size:12px;font-weight:700;margin-bottom:7px}
+input,select,textarea{width:100%;border:1px solid #c9cebd;background:white;padding:12px;border-radius:4px;color:var(--ink);min-width:0}
+textarea{resize:vertical;min-height:120px}
+.field{margin-bottom:17px}
+form .btn{width:100%}
+.form-note{font-size:12px;margin:14px 0 0}
+.status{font-size:13px;margin:12px 0 0;color:var(--ink)}
+footer{background:var(--ink);color:#c7c9c7;padding:30px 0;font-size:12px}
+.footer-row{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.sticky-call{display:none}
+
+@media(min-width:1500px){
+.hero-grid{min-height:740px}
+.hero-photo{height:640px}
+}
+@media(max-width:950px){
+nav{gap:17px}
+.hero-grid{gap:30px}
+h1{font-size:60px}
+.services{gap:15px}
+.service-copy{padding:22px}
+.about,.faq-grid,.contact-grid{gap:35px}
+.hero-photo{height:520px}
+}
+@media(max-width:760px){
+.wrap{width:calc(100% - 36px)}
+.section{padding:65px 0}
+.nav{height:77px}
+.brand{font-size:17px}
+.brand img{width:49px;height:49px}
+.menu{display:block}
+nav{display:none;position:absolute;top:77px;left:0;right:0;background:var(--cream);padding:22px;flex-direction:column;align-items:stretch;border-bottom:1px solid var(--line)}
+nav.open{display:flex}
+.hero-grid{grid-template-columns:1fr;gap:0}
+.hero-copy{padding:50px 0 20px}
+h1{font-size:clamp(49px,12vw,70px)}
+.hero-photo{height:440px;margin:20px 0 40px}
+.hero-photo>img{border-radius:70px 7px 7px 7px}
+.photo-note{left:12px;bottom:20px;padding:17px;max-width:230px}
+.ribbon .wrap{justify-content:center;text-align:center;gap:8px 20px}
+.section-top{display:block}
+.section-top p{margin-top:20px;max-width:100%}
+.services,.comparisons,.about,.faq-grid,.contact-grid{grid-template-columns:1fr}
+.service-image{height:280px}
+.service-image.screen-photo{aspect-ratio:3/2}
+.services{gap:25px}
+.compare{aspect-ratio:3/4}
+.comparisons{gap:30px}
+.about{gap:45px}
+.about-photo img{height:430px}
+.about-photo .stamp{right:12px;bottom:20px}
+.gallery{grid-template-columns:1fr 1fr;gap:16px}
+.gallery figure:last-child{grid-column:1/-1;width:65%;margin:auto}
+.gallery-section{padding-top:0}
+.steps{grid-template-columns:1fr;gap:20px}
+.step b{margin-bottom:18px}
+.faq-grid{gap:10px}
+.contact-grid{gap:35px}
+form{padding:22px}
+.form-grid{grid-template-columns:1fr}
+footer{padding-bottom:95px}
+.sticky-call{display:flex;position:fixed;bottom:0;left:0;right:0;z-index:15;background:var(--cream);padding:10px 18px;border-top:1px solid var(--line);gap:10px}
+.sticky-call a{flex:1;padding:10px;font-size:13px;min-height:45px}
+.sticky-call .outline{background:var(--ink);color:white}
+}
+@media(prefers-reduced-motion:reduce){
+html{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header>
+<div class="wrap nav">
+<a class="brand" href="#" aria-label="Nathan’s Gardening Co. home">
+<img src="nathan-logo.jpg" alt="Nathan’s Gardening Co. logo">
+<span>Nathan’s Gardening Co.<small>Tea Tree Gully · Adelaide</small></span>
+</a>
+<button class="menu" aria-expanded="false" aria-controls="navigation" type="button">Menu</button>
+<nav id="navigation" aria-label="Main navigation">
+<a href="#services">Garden care</a>
+<a href="#results">Our work</a>
+<a href="#about">About</a>
+<a class="btn" href="#quote">Get a quote ↗</a>
+</nav>
+</div>
+</header>
+
+<main id="main">
+<section class="hero">
+<div class="wrap hero-grid">
+<div class="hero-copy">
+<span class="eyebrow">Nathan’s Gardening Co. · Tea Tree Gully</span>
+<h1>Your garden.<br>A whole new<br><em>lease on life.</em></h1>
+<p>From overgrown corners to neatly shaped hedges. Give your outdoor space the care it deserves with Nathan’s Gardening Co.</p>
+<div class="actions">
+<a class="btn" href="#quote">Let’s talk about your garden ↗</a>
+<a class="btn outline" href="#results">See the transformations ↓</a>
+</div>
+<div class="hero-foot">
+<span>Garden clean-ups</span>
+<span>Hedge care</span>
+<span>Garden maintenance</span>
+</div>
+</div>
+<div class="hero-photo">
+<img src="garden-hero.jpg" alt="Neatly shaped hedges and garden beds from Nathan’s gardening work" fetchpriority="high">
+<div class="photo-note">
+<small>THE LITTLE DETAILS MATTER</small>
+Fresh edges.<br>Clean lines. A garden to enjoy.
+</div>
+</div>
+</div>
+</section>
+
+<div class="ribbon">
+<div class="wrap">
+<span>Based in Tea Tree Gully, Adelaide</span>
+<span>Real gardens. Real transformations.</span>
+<a href="tel:+61413050696">Talk to Nathan · 0413 050 696 ↗</a>
+</div>
+</div>
+
+<section class="section" id="services">
+<div class="wrap">
+<div class="section-top">
+<div>
+<span class="eyebrow">A little care goes a long way</span>
+<h2>Bring out the best<br>in your outdoor space.</h2>
+</div>
+<p>A one-off tidy-up or help keeping things in shape? Tell Nathan what your garden needs.</p>
+</div>
+
+<div class="services">
+<article class="service">
+<div class="service-image">
+<img src="hedge-garden.jpg" alt="Trimmed hedges and shaped shrubs in a residential garden" loading="lazy">
+</div>
+<div class="service-copy">
+<span class="number">01 / HEDGE CARE</span>
+<h3>A sharper look.</h3>
+<p>Hedge trimming and shrub shaping to bring definition back to your garden.</p>
+<a class="text-link" href="#quote">Ask about hedge care ↗</a>
+</div>
+</article>
+
+<article class="service">
+<div class="service-image">
+<img src="path-after.jpg" alt="Brick side path after weeds have been cleared" loading="lazy">
+</div>
+<div class="service-copy">
+<span class="number">02 / GARDEN CLEAN-UPS</span>
+<h3>Room to breathe.</h3>
+<p>Weeding and garden tidy-ups to reclaim the spaces hidden beneath unwanted growth.</p>
+<a class="text-link" href="#quote">Plan a garden clean-up ↗</a>
+</div>
+</article>
+
+<article class="service">
+<div class="service-image screen-photo" style="background-image:url('garden-mulching.png')" role="img" aria-label="Freshly mulched garden bed beside a lawn"></div>
+<div class="service-copy">
+<span class="number">03 / GARDEN BEDS</span>
+<h3>The finishing touch.</h3>
+<p>Garden bed tidying and mulching for a clean, considered finish around your plants.</p>
+<a class="text-link" href="#quote">Discuss your garden beds ↗</a>
+</div>
+</article>
+</div>
+</div>
+</section>
+
+<section class="section results" id="results">
+<div class="wrap">
+<div class="section-top">
+<div>
+<span class="eyebrow">The difference is in the details</span>
+<h2>Same space.<br>Fresh perspective.</h2>
+</div>
+<p>Slide across to explore two of Nathan’s clean-ups. The photos show the actual work.</p>
+</div>
+
+<div class="comparisons">
+<article>
+<div class="compare">
+<img src="courtyard-after.jpg" alt="Courtyard after the weeds were removed" loading="lazy">
+<img class="before" src="courtyard-before.jpg" alt="Courtyard before, with weeds across the brick paving" loading="lazy">
+<span class="tag left">BEFORE</span>
+<span class="tag right">AFTER</span>
+<span class="handle" aria-hidden="true">↔</span>
+<input type="range" min="0" max="100" value="50" aria-label="Compare courtyard before and after" aria-valuetext="50 percent before visible">
+</div>
+<div class="result-caption">
+<div>
+<h3>Courtyard reclaimed.</h3>
+<p>Overgrown paving cleared to reveal the brickwork beneath.</p>
+</div>
+<span>01 / CLEAN-UP</span>
+</div>
+</article>
+
+<article>
+<div class="compare">
+<img src="path-after.jpg" alt="Side path after clearing the weeds" loading="lazy">
+<img class="before" src="path-before.jpg" alt="Side path before, with weeds growing between the bricks" loading="lazy">
+<span class="tag left">BEFORE</span>
+<span class="tag right">AFTER</span>
+<span class="handle" aria-hidden="true">↔</span>
+<input type="range" min="0" max="100" value="50" aria-label="Compare side path before and after" aria-valuetext="50 percent before visible">
+</div>
+<div class="result-caption">
+<div>
+<h3>A clearer way through.</h3>
+<p>Weeds and loose debris removed along the side passage.</p>
+</div>
+<span>02 / WEEDING</span>
+</div>
+</article>
+</div>
+</div>
+</section>
+
+<section class="section" id="about">
+<div class="wrap about">
+<div class="about-photo">
+<img src="hedge-garden.jpg" alt="Nathan’s completed hedge and garden work" loading="lazy">
+<div class="stamp">Good gardens.<br>Great attention<br>to detail.</div>
+</div>
+<div>
+<span class="eyebrow">Your garden, in good shape</span>
+<h2>More time enjoying it.<br>Less time tackling it.</h2>
+<p>Nathan’s Gardening Co. is based in Tea Tree Gully, Adelaide. From a garden that needs a fresh start to hedges that need a little precision, it starts with a conversation about your space.</p>
+<p>Explore the work here, then get in touch with Nathan to discuss the job, your location and a suitable time.</p>
+<ul class="checklist">
+<li>Hedge trimming and shrub shaping</li>
+<li>Weeding and garden clean-ups</li>
+<li>Garden bed tidying and mulching</li>
+<li>Ask about ongoing garden maintenance</li>
+</ul>
+<a class="btn" href="tel:+61413050696">Call Nathan ↗</a>
+</div>
+</div>
+</section>
+
+<section class="section gallery-section">
+<div class="wrap">
+<div class="section-top">
+<div>
+<span class="eyebrow">A closer look</span>
+<h2>Care you can see.</h2>
+</div>
+<p>A selection of Nathan’s garden work, from crisp hedge lines to sculpted greenery.</p>
+</div>
+
+<div class="gallery">
+<figure>
+<div class="screen-photo" style="background-image:url('hedge-trimming.png')" role="img" aria-label="A neatly trimmed rectangular hedge"></div>
+<figcaption>Clean hedge lines.</figcaption>
+</figure>
+<figure>
+<div class="screen-photo" style="background-image:url('topiary.png')" role="img" aria-label="Two spiral-shaped evergreen shrubs"></div>
+<figcaption>A little more character.</figcaption>
+</figure>
+<figure>
+<div class="screen-photo" style="background-image:url('garden-beds.png')" role="img" aria-label="Tidy planted garden beds beside a lawn"></div>
+<figcaption>Freshened-up garden beds.</figcaption>
+</figure>
+</div>
+</div>
+</section>
+
+<section class="section process">
+<div class="wrap">
+<span class="eyebrow">Let’s get your garden sorted</span>
+<h2>From first chat<br>to a fresh start.</h2>
+<div class="steps">
+<div class="step">
+<b>01 / GET IN TOUCH</b>
+<h3>Tell Nathan about it.</h3>
+<p>Share your suburb, the work you have in mind and any photos that help explain the job.</p>
+</div>
+<div class="step">
+<b>02 / DISCUSS THE JOB</b>
+<h3>Work out the details.</h3>
+<p>Discuss the scope, access and whether an on-site look is needed before a quote.</p>
+</div>
+<div class="step">
+<b>03 / PLAN THE VISIT</b>
+<h3>Give your garden a reset.</h3>
+<p>Once the work and quote are agreed, arrange a suitable time with Nathan.</p>
+</div>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="wrap faq-grid">
+<div>
+<span class="eyebrow">A few things to know</span>
+<h2>Garden questions?<br>Start here.</h2>
+</div>
+<div>
+<details>
+<summary>Where is Nathan based?</summary>
+<p>Nathan’s Gardening Co. is based in Tea Tree Gully, Adelaide, SA 5091. Include your suburb when you enquire so Nathan can confirm whether he services your location.</p>
+</details>
+<details>
+<summary>Can I enquire about a one-off clean-up?</summary>
+<p>Yes. Describe the space and the work you would like done, then Nathan can discuss the scope and availability with you.</p>
+</details>
+<details>
+<summary>Can I send photos of my garden?</summary>
+<p>Yes. Email your photos to nathgardens@gmail.com with your name, suburb and a short description of the job.</p>
+</details>
+<details>
+<summary>How do I get a price?</summary>
+<p>Call Nathan or use the email enquiry form below. Pricing depends on the work involved; Nathan can advise whether a site visit is needed before quoting.</p>
+</details>
+<details>
+<summary>What about regular garden care?</summary>
+<p>Let Nathan know you are interested in ongoing maintenance. He can discuss the tasks, frequency and current availability with you.</p>
+</details>
+</div>
+</div>
+</section>
+
+<section class="section contact" id="quote">
+<div class="wrap contact-grid">
+<div>
+<span class="eyebrow">Ready for a fresh start?</span>
+<h2>Let’s make your<br>garden feel<br>like yours again.</h2>
+<p>Tell Nathan what you have in mind. A few details are all it takes to start the conversation.</p>
+<div class="contact-links">
+<div>
+<small>CALL NATHAN</small>
+<a href="tel:+61413050696">0413 050 696 ↗</a>
+</div>
+<div>
+<small>EMAIL</small>
+<a href="mailto:nathgardens@gmail.com">nathgardens@gmail.com ↗</a>
+</div>
+<div>
+<small>BASED IN</small>
+<address>Tea Tree Gully, Adelaide<br>South Australia 5091</address>
+</div>
+</div>
+</div>
+
+<form id="quote-form">
+<h3>Tell us about your garden.</h3>
+<div class="form-grid">
+<div class="field">
+<label for="name">Your name *</label>
+<input id="name" name="name" required autocomplete="name" maxlength="100">
+</div>
+<div class="field">
+<label for="phone">Phone number *</label>
+<input id="phone" name="phone" type="tel" required autocomplete="tel" maxlength="40">
+</div>
+</div>
+<div class="field">
+<label for="email">Email address *</label>
+<input id="email" name="email" type="email" required autocomplete="email" maxlength="150">
+</div>
+<div class="field">
+<label for="suburb">Your suburb *</label>
+<input id="suburb" name="suburb" required autocomplete="address-level2" maxlength="100">
+</div>
+<div class="field">
+<label for="service">What can Nathan help with?</label>
+<select id="service" name="service">
+<option>Garden clean-up / weeding</option>
+<option>Hedge trimming / shrub shaping</option>
+<option>Garden beds / mulching</option>
+<option>Ongoing maintenance enquiry</option>
+<option>Something else / several tasks</option>
+</select>
+</div>
+<div class="field">
+<label for="message">A little about the job *</label>
+<textarea id="message" name="message" required maxlength="3000" placeholder="What needs attention? How big is the space?"></textarea>
+</div>
+<button class="btn" type="submit">Prepare my email enquiry ↗</button>
+<p class="form-note">This opens your email app with the details filled in. Attach photos if you like, then press Send. Your details are not stored on this website.</p>
+<p class="status" id="form-status" role="status"></p>
+</form>
+</div>
+</section>
+</main>
+
+<footer>
+<div class="wrap footer-row">
+<span>© <span id="year">2026</span> Nathan’s Gardening Co.</span>
+<span>Website concept by Competitive Marketing</span>
+<a href="#main">Back to top ↑</a>
+</div>
+</footer>
+
+<div class="sticky-call">
+<a class="btn outline" href="tel:+61413050696">Call Nathan ↗</a>
+<a class="btn" href="#quote">Get a quote ↗</a>
+</div>
+
+<script>
+const menu = document.querySelector('.menu');
+const nav = document.querySelector('nav');
+
+menu.addEventListener('click', () => {
+  const open = menu.getAttribute('aria-expanded') !== 'true';
+  menu.setAttribute('aria-expanded', String(open));
+  nav.classList.toggle('open', open);
+  menu.textContent = open ? 'Close' : 'Menu';
+});
+
+nav.querySelectorAll('a').forEach(a => {
+  a.addEventListener('click', () => {
+    nav.classList.remove('open');
+    menu.setAttribute('aria-expanded', 'false');
+    menu.textContent = 'Menu';
+  });
+});
+
+document.querySelectorAll('.compare input').forEach(input => {
+  input.addEventListener('input', () => {
+    input.parentElement.style.setProperty('--split', input.value + '%');
+    input.setAttribute(
+      'aria-valuetext',
+      input.value + ' percent before visible'
+    );
+  });
+});
+
+document.getElementById('year').textContent = new Date().getFullYear();
+
+document.getElementById('quote-form').addEventListener('submit', event => {
+  event.preventDefault();
+
+  const data = new FormData(event.currentTarget);
+
+  const body = [
+    'Hi Nathan,',
+    '',
+    'I’d like to enquire about some gardening work.',
+    '',
+    'Name: ' + data.get('name'),
+    'Phone: ' + data.get('phone'),
+    'Email: ' + data.get('email'),
+    'Suburb: ' + data.get('suburb'),
+    'Service: ' + data.get('service'),
+    '',
+    'Job details:',
+    data.get('message'),
+    '',
+    'Thanks!'
+  ].join('\n');
+
+  window.location.href =
+    'mailto:nathgardens@gmail.com?subject=' +
+    encodeURIComponent('Garden enquiry — ' + data.get('suburb')) +
+    '&body=' +
+    encodeURIComponent(body);
+
+  document.getElementById('form-status').textContent =
+    'Send the draft from your email app to complete your enquiry. ' +
+    'If it did not open, call 0413 050 696 or email nathgardens@gmail.com.';
+});
+</script>
+</body>
+</html>
